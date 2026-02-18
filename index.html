@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexAura P | Limited Edition Drop</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ad2bee",
+              "background-light": "#f7f6f8",
+              "background-dark": "#0a050c",
+              "neutral-dark": "#161118",
+              "neutral-light": "#ffffff",
+              "accent-glow": "rgba(173, 43, 238, 0.15)",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --bg-color: #0a050c;
+        --grid-color: rgba(173, 43, 238, 0.03);
+      }
+      html.light {
+        --bg-color: #f7f6f8;
+        --grid-color: rgba(173, 43, 238, 0.05);
+      }
+      body {
+        background-color: var(--bg-color);
+        background-image: 
+          linear-gradient(var(--grid-color) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+        background-size: 40px 40px;
+        min-height: 100vh;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .hero-glow {
+        box-shadow: 0 0 100px 20px rgba(173, 43, 238, 0.15);
+      }
+      html.light .hero-glow {
+        box-shadow: 0 0 100px 20px rgba(173, 43, 238, 0.1);
+      }
+      .glass-panel {
+        background: rgba(35, 28, 39, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(173, 43, 238, 0.1);
+      }
+      html.light .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(173, 43, 238, 0.1);
+      }
+      :focus-visible {
+        outline: 2px solid #ad2bee;
+        outline-offset: 4px;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #161118;
+        border: 2px solid var(--bg-color);
+        border-radius: 4px;
+      }
+      html.light ::-webkit-scrollbar-thumb {
+        background: #d1d1d1;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ad2bee;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="font-display text-white dark:text-white light:text-neutral-900 selection:bg-primary selection:text-white transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
