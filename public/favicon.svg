@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1121"/>
+      <stop offset="1" stop-color="#0A050C"/>
+    </linearGradient>
+    <linearGradient id="gem" x1="18" y1="20" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97BFF"/>
+      <stop offset="0.55" stop-color="#AD2BEE"/>
+      <stop offset="1" stop-color="#6A1B9A"/>
+    </linearGradient>
+    <filter id="glow" x="8" y="8" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="13.5" stroke="#AD2BEE" stroke-opacity="0.28"/>
+
+  <g filter="url(#glow)">
+    <path d="M32 14L47 28L32 50L17 28L32 14Z" fill="url(#gem)"/>
+    <path d="M32 14L39.5 28L32 50L24.5 28L32 14Z" fill="white" fill-opacity="0.14"/>
+    <path d="M17 28H47" stroke="#F5D8FF" stroke-opacity="0.34" stroke-width="1.5"/>
+  </g>
+</svg>
